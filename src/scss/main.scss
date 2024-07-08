@@ -1,5 +1,3 @@
 @import './mixins';
-
-body {
-  background: gray;
-}
+@import './base';
+@import './globals';
