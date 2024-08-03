@@ -78,9 +78,3 @@ label {
   opacity: 0;
   visibility: hidden;
 }
-
-.container {
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-  max-width: calc(var(--container-width) + (var(--container-padding) * 2));
-}

@@ -1,39 +1,80 @@
 .hero {
-  overflow-x: hidden;
-  padding-top: 201px;
+  position: relative;
+  padding-top: 87px 0 141px;
+
+  @include mini-descktop{
+    padding: 77px 0 121px;
+  }
+
+  @include mobile{
+    min-height: calc(100dvh - 128px);
+  }
+
+  &::before {
+    top: 50px;
+    left: 181px;
+    width: 551px;
+    height: 551px;
+    background: #fa7515;
+    opacity: 0.2;
+    filter: blur(220px);
+
+
+    @include mini-descktop{
+      left: 80px;
+      width: 351px;
+      height: 351px;
+    }
+
+    @include small-tablet{
+      width: 251px;
+      height: 251px;
+    }
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+    width: 525px;
+    height: 525px;
+    background: var(--sucsess-color-70);
+    filter: blur(180px);
+
+
+    @include mini-descktop{
+      width: 325px;
+      height: 325px;
+    }
+
+    @include small-tablet{
+      top: 20px;
+      left: 40px;
+      width: 225px;
+      height: 225px;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: var(--z-index-0);
+    display: inline-block;
+    border-radius: 50%;
+  }
 
   &__container {
-    position: relative;
     @include flex-justify-between;
     align-items: flex-end;
 
-    &::before {
-      top: -50px;
-      left: -80px;
-      width: 551px;
-      height: 551px;
-      background: #fa7515;
-      opacity: 0.2;
-      filter: blur(220px);
+    @include mini-descktop{
+      gap: 50px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
-    &::after {
-      right: -400px;
-      bottom: -170px;
-      width: 525px;
-      height: 525px;
-      background: var(--sucsess-color-70);
-      filter: blur(180px);
-    }
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      z-index: var(--z-index-0);
-      display: inline-block;
-      border-radius: 50%;
-    }
   }
 
   &__left {
@@ -47,6 +88,23 @@
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
     margin-bottom: 114px;
+
+
+    @include mini-descktop {
+      margin-bottom: 74px;
+    }
+    @include tablet {
+      margin-bottom: 44px;
+      font-size: 60px;
+    }
+    @include mobile {
+      margin-bottom: 38px;
+      font-size: 48px;
+    }
+    @include small-mobile {
+      margin-bottom: 30px;
+      font-size: 38px;
+    }
   }
 
   &__subtitle {
@@ -56,6 +114,15 @@
   &__form {
     @include flex-align-center;
     gap: 16px;
+
+    @include mini-descktop{
+      justify-content: center;
+    }
+
+    @include small-mobile{
+      gap: 20px;
+      flex-direction: column;
+    }
   }
 
   &__input {
@@ -67,21 +134,50 @@
     line-height: 150%;
     color: var(--neutral-color-100);
     background-color: transparent;
+
+    @include small-tablet{
+      padding-bottom: 13px;
+    }
+
+    @include mobile{
+      min-width: 100px;
+      max-width: 180px;
+    }
   }
 
   &__btn {
     padding: 16px 44px;
     color: var(--neutral-color-10);
     background-color: var(--neutral-color-100);
+
+    @include small-tablet{
+      padding: 13px 32px;
+    }
   }
 
   &__right {
     position: relative;
+    margin-right: 20px;
+
+
+    @include mini-descktop{
+      display: none;
+    }
   }
 
   &__sales {
     padding: 20px;
     margin-bottom: 29px;
+
+    @include small-descktop{
+      max-width: 320px;
+    }
+
+    &-img{
+      @include small-descktop{
+        max-width: 280px;
+      }
+    }
 
     &-title {
       margin-bottom: 16px;
@@ -90,6 +186,11 @@
       line-height: 150%;
       letter-spacing: -0.03em;
       color: #1d1e25;
+
+      @include tablet{
+        font-size: 60px;
+        margin-bottom: 44px;
+      }
     }
   }
 
@@ -99,6 +200,17 @@
     right: -140px;
     display: inline-block;
     padding: 15px 18px;
+
+    @include small-descktop {
+      top: -140px;
+      right: -30px;
+    }
+
+
+    @include mini-descktop{
+      top: 0;
+      right: -100px;
+    }
 
     &-title {
       margin-bottom: 12px;
