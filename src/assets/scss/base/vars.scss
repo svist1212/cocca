@@ -19,9 +19,21 @@
   --logo-colot-text: #101010;
   --logo-color-circle: #101010;
 
+  
+  //overview colors
+  --overview-bg-colors: #1D1E25;
+
   // container
   --container-padding: 15px;
   --container-width: 1200px;
+
+  @include mini-descktop {
+    --container-width: 1000px;
+  }
+
+  @include tablet {
+    --container-width: 860px;
+  }
 
   @include mobile {
     --container-width: 480px;
@@ -47,6 +59,9 @@
   //logo color
   --logo-colot-text: #fff;
   --logo-color-circle: #343542;
+
+  //overview colors
+   --overview-bg-colors: #18181D;
 
   //sucsess color
   --sucsess-color-70: #e2f8f033;

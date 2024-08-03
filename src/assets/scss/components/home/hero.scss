@@ -1,106 +1,54 @@
 .hero {
-  position: relative;
-  padding-top: 87px 0 141px;
+  padding: 87px 0 141px;
 
-  @include mini-descktop{
+  @include mini-descktop {
     padding: 77px 0 121px;
   }
 
-  @include mobile{
-    min-height: calc(100dvh - 128px);
-  }
-
-  &::before {
-    top: 50px;
-    left: 181px;
-    width: 551px;
-    height: 551px;
-    background: #fa7515;
-    opacity: 0.2;
-    filter: blur(220px);
-
-
-    @include mini-descktop{
-      left: 80px;
-      width: 351px;
-      height: 351px;
-    }
-
-    @include small-tablet{
-      width: 251px;
-      height: 251px;
-    }
-  }
-
-  &::after {
-    right: 0;
-    bottom: 0;
-    width: 525px;
-    height: 525px;
-    background: var(--sucsess-color-70);
-    filter: blur(180px);
-
-
-    @include mini-descktop{
-      width: 325px;
-      height: 325px;
-    }
-
-    @include small-tablet{
-      top: 20px;
-      left: 40px;
-      width: 225px;
-      height: 225px;
-    }
-  }
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: var(--z-index-0);
-    display: inline-block;
-    border-radius: 50%;
+  @include mobile {
+    min-height: calc(100dvh - 109px);
   }
 
   &__container {
     @include flex-justify-between;
     align-items: flex-end;
 
-    @include mini-descktop{
+    @include mini-descktop {
       gap: 50px;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
-
-
   }
 
   &__left {
-    max-width: 594px;
+    @include mini-descktop {
+      max-width: 617px;
+    }
   }
 
   &__title {
+    margin-bottom: 114px;
     font-weight: 700;
     font-size: 80px;
     line-height: 120%;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
-    margin-bottom: 114px;
-
 
     @include mini-descktop {
       margin-bottom: 74px;
     }
+
     @include tablet {
       margin-bottom: 44px;
       font-size: 60px;
     }
+
     @include mobile {
       margin-bottom: 38px;
       font-size: 48px;
     }
+
     @include small-mobile {
       margin-bottom: 30px;
       font-size: 38px;
@@ -109,17 +57,23 @@
 
   &__subtitle {
     margin-bottom: 69px;
+
+    & br {
+      @include mini-descktop {
+        display: none;
+      }
+    }
   }
 
   &__form {
     @include flex-align-center;
     gap: 16px;
 
-    @include mini-descktop{
+    @include mini-descktop {
       justify-content: center;
     }
 
-    @include small-mobile{
+    @include small-mobile {
       gap: 20px;
       flex-direction: column;
     }
@@ -135,11 +89,11 @@
     color: var(--neutral-color-100);
     background-color: transparent;
 
-    @include small-tablet{
+    @include small-tablet {
       padding-bottom: 13px;
     }
 
-    @include mobile{
+    @include mobile {
       min-width: 100px;
       max-width: 180px;
     }
@@ -150,8 +104,8 @@
     color: var(--neutral-color-10);
     background-color: var(--neutral-color-100);
 
-    @include small-tablet{
-      padding: 13px 32px;
+    @include small-tablet {
+      padding: 12px 32px;
     }
   }
 
@@ -159,22 +113,21 @@
     position: relative;
     margin-right: 20px;
 
-
-    @include mini-descktop{
+    @include mini-descktop {
       display: none;
     }
   }
 
   &__sales {
-    padding: 20px;
     margin-bottom: 29px;
+    padding: 20px;
 
-    @include small-descktop{
+    @include small-descktop {
       max-width: 320px;
     }
 
-    &-img{
-      @include small-descktop{
+    &-img {
+      @include small-descktop {
         max-width: 280px;
       }
     }
@@ -186,11 +139,6 @@
       line-height: 150%;
       letter-spacing: -0.03em;
       color: #1d1e25;
-
-      @include tablet{
-        font-size: 60px;
-        margin-bottom: 44px;
-      }
     }
   }
 
@@ -206,17 +154,11 @@
       right: -30px;
     }
 
-
-    @include mini-descktop{
-      top: 0;
-      right: -100px;
-    }
-
     &-title {
       margin-bottom: 12px;
-      font-size: 16px;
       font-weight: 700;
-      line-height: 135%;
+      font-size: 16px;
+      line-height: 187%;
       letter-spacing: -0.03em;
       color: #1d1e25;
     }
@@ -226,15 +168,15 @@
   &__customer {
     border-radius: 8px;
     box-shadow: 20px 40px 80px 0 #5960871f;
-    background-color: #fff;
+    background: #fff;
   }
 
   &__stats {
-    padding: 20px 29px;
     border-radius: 8px;
-    box-shadow: 20px 40px 80px 0px #2d33511f;
+    padding: 20px 29px;
+    box-shadow: 20px 40px 80px 0 #2d33511f;
     text-align: left;
-    background: #000000;
+    background: #000;
 
     &-head {
       &-th {
@@ -246,29 +188,30 @@
     }
 
     &-body {
-      &-th {
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 143%;
-        color: #ffffff;
+      &-td {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 130%;
+        white-space: nowrap;
+        color: #fff;
 
         &:nth-child(1) {
-          padding-right: 88px;
+          padding-right: 80px;
         }
       }
 
       &-num {
         display: inline-block;
         margin-right: 3px;
-        font-size: 14px;
         font-weight: 600;
+        font-size: 14px;
         line-height: 143%;
 
         &--green {
           color: #60d39c;
 
           &::before {
-            background: url(../assets/icons/green-arrow-icon.svg);
+            background: url('../assets/icons/green-arrow-icon.svg');
           }
         }
 
@@ -276,9 +219,7 @@
           color: #e35454;
 
           &::before {
-            content: '';
-
-            background: url(../assets/icons/red-arrow-icon.svg);
+            background: url('../assets/icons/red-arrow-icon.svg');
           }
         }
 
@@ -292,8 +233,8 @@
       }
 
       &-text {
-        font-size: 14px;
         font-weight: 400;
+        font-size: 14px;
         line-height: 157%;
         letter-spacing: -0.04em;
         color: #5c616e;
