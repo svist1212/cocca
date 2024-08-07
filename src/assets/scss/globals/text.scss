@@ -6,15 +6,15 @@
   &-h2 {
     font-size: 56px;
 
-    @include tablet{
+    @include tablet {
       font-size: 46px;
     }
 
-    @include mobile{
+    @include mobile {
       font-size: 36px;
     }
 
-    @include small-mobile{
+    @include small-mobile {
       font-size: 30px;
     }
   }
@@ -30,15 +30,15 @@
   &-h5 {
     font-size: 32px;
 
-    @include tablet{
+    @include tablet {
       font-size: 28px;
     }
 
-    @include mobile{
+    @include mobile {
       font-size: 24px;
     }
 
-    @include small-mobile{
+    @include small-mobile {
       font-size: 22px;
     }
   }
@@ -63,14 +63,14 @@
       letter-spacing: -0.03em;
       color: var(--neutral-color-100);
 
-      @include tablet{
+      @include tablet {
         font-size: 28px;
       }
 
-      @include mobile{
+      @include mobile {
         font-size: 24px;
       }
-      @include small-mobile{
+      @include small-mobile {
         font-size: 20px;
       }
 
@@ -82,7 +82,7 @@
         background-color: var(--neutral-color-100);
         transform: translateY(-43px);
 
-        @include mini-descktop{
+        @include mini-descktop {
           display: none;
         }
       }
@@ -95,7 +95,7 @@
     &-medium {
       font-size: 18px;
 
-      @include mobile{
+      @include mobile {
         font-size: 16px;
       }
     }

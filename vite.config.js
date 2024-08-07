@@ -16,8 +16,8 @@ export default defineConfig({
       input: {
         main: './src/index.html',
         about: './src/about.html',
-      }
-    }
+      },
+    },
   },
   plugins: [
     ViteMinifyPlugin(),
