@@ -16,9 +16,11 @@ export default defineConfig({
       input: {
         main: './src/index.html',
         about: './src/pricing.html',
+        contact: './src/contact.html',
       },
     },
   },
+  
   plugins: [
     ViteMinifyPlugin(),
     injectHTML(),
