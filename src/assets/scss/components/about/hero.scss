@@ -1,0 +1,134 @@
+.sales {
+
+  &__top {
+    padding: 105px 0 135px;
+
+    @include mini-descktop {
+      padding: 70px 0 70px;
+    }
+
+    &-title {
+      padding-bottom: 118px;
+      max-width: 959px;
+      font-weight: 700;
+      letter-spacing: -3px;
+      color: var(--neutral-color-100);
+
+      @include small-tablet {
+        padding-bottom: 70px;
+      }
+
+      @include mobile {
+        padding-bottom: 40px;
+      }
+
+      @include small-mobile {
+        padding-bottom: 20px;
+      }
+    }
+
+    &-descr {
+      @include flex-all-between;
+      gap: 192px;
+      align-items: center;
+
+      @include small-tablet {
+        gap: 40px;
+      }
+
+      @include mobile {
+        gap: 15px;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-text {
+        &::before {
+          width: 76px;
+          width: 100%;
+        }
+      }
+
+      &-icon {
+        & svg {
+          & path,
+          & rect,
+          & circle {
+            fill: var(--neutral-color-icon-90);
+          }
+        }
+      }
+    }
+  }
+  
+  &__slider{
+    &-wrapper{
+    padding-bottom: 165px;
+
+    @include mini-descktop {
+      padding-bottom: 70px;
+    }
+    }
+  }
+  &__slide {
+    max-width: 502px;
+    max-height: 689px;
+    margin-right: 0;
+    position: relative;
+
+    &--btn{
+      z-index: var(--z-index-3);
+    }
+
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 99px;
+      left: 103%;
+
+      z-index: var(--z-index-2);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include tablet {
+        display: none;
+      }
+
+      @include small-mobile {
+        display: none;
+      }
+    }
+
+    &-title {
+      padding: 24px 0 8px;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -1%;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      padding-bottom: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      color: var(--neutral-color-150);
+    }
+
+    &-btn {
+      padding: 16px 32px;
+      border-radius: 100px;
+      color: #ffffff;
+      background: var(--neutral-color-100);
+
+      transition: opacity var(--transition);
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
