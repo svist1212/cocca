@@ -1,4 +1,4 @@
-import '../assets/scss/jobs.scss';
+import '/scss/jobs.scss';
 
 //components
 import { useTheme } from './components/theme.js';

@@ -5,6 +5,7 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 export default defineConfig({
   root: './src',
+  base:'/cocca/',
   server: {
     port: 3000,
     open: true,
