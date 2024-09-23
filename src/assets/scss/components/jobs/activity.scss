@@ -1,0 +1,151 @@
+.activity {
+  padding: 95px 0 168px;
+
+  @include mini-descktop{
+    padding: 70px 0;
+  }
+
+  &__title {
+    padding-bottom: 53px;
+    letter-spacing: -3px;
+    color: var(--neutral-color-100);
+
+    @include mini-descktop{
+      padding-bottom: 48px;
+    }
+  }
+
+  &__descr {
+    max-width: 674px;
+    padding-bottom: 128px;
+    letter-spacing: -1px;
+    color: var(--neutral-color-100);
+
+    @include mini-descktop{
+      padding-bottom: 70px;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+
+      @include small-tablet{
+        flex-wrap: wrap;
+      }
+
+      @include small-mobile{
+        justify-content: center;
+      }
+    }
+
+    &-link {
+      padding: 10px 14px;
+      font-weight: 600;
+      line-height: 24px;
+      color: var(--neutral-color-150);
+      position: relative;
+
+      &:focus {
+        color: var(--neutral-color-100);
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        left: 0;
+        height: 1px;
+        background-color: var(--neutral-color-100);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity var(--transition),
+          visibility var(--transition);
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__sliders {
+    padding: 80px 0 168px;
+
+    @include mini-descktop{
+      padding: 70px 0 100px;
+    }
+  }
+
+  &__slide {
+    max-width: fit-content;
+
+    &--btn {
+      z-index: var(--z-index-2);
+    }
+
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 99px;
+      left: 103%;
+
+      z-index: var(--z-index-3);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include tablet {
+        display: none;
+      }
+
+      @include small-mobile {
+        display: none;
+      }
+    }
+    
+    &-img {
+      padding-bottom: 16px;
+    }
+
+    &-info {
+      &-photo {
+        @include flex-all-between;
+        padding-bottom: 24px;
+        font-weight: 400;
+        line-height: 150%;
+        color: var(--neutral-color-150);
+      }
+    }
+
+    &-title {
+      max-width: 370px;
+
+      padding-bottom: 16px;
+      line-height: 40px;
+      letter-spacing: -1px;
+      color: var(--neutral-color-100);
+    }
+
+    &-text {
+      max-width: 332px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      color: var(--neutral-color-150);
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.advice {
+  padding: 120px 0;
+  background-color: #1d1e25;
+
+  @include mini-descktop{
+    padding: 70px 0;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 159px 32px;
+
+    @include mini-descktop{
+      align-items: center;
+      justify-content: center;
+      gap: 68px;
+    }
+
+  }
+
+  &__card {
+    max-width: 584px;
+    max-height: fit-content;
+    position: relative;
+
+    &:last-child{
+      transform: translateY(-24.5%);
+
+      @include mini-descktop{
+        transform: none;
+      }
+    }
+
+    &-img {
+      padding-bottom: 24px;
+    }
+
+    &-title {
+      padding-bottom: 24px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    &-descr {
+      max-width: 515px;
+      font-weight: 500;
+      line-height: 32px;
+      color: #7e8492;
+    }
+  }
+}

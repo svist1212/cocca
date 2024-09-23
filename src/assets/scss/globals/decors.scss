@@ -24,6 +24,18 @@
     }
   }
 
+  &--about{
+    &::before{
+      top: -136%;
+      left: 6%;
+    }
+
+    &::after{
+      top: 132%;
+      left: 66%;
+    }
+  }
+
   &::after {
     right: 0;
     bottom: 0;

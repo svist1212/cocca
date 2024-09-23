@@ -1,0 +1,13 @@
+@import './mixins';
+@import './base';
+@import './globals';
+
+//components
+@import './components/header.scss';
+
+@import './components/jobs/activity.scss';
+@import './components/jobs/advice.scss';
+@import './components/jobs/articles.scss';
+
+
+@import './components/footer.scss';
